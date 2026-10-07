@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FreeTDEECalculator - Open Source Metabolic Calculators</title>
+<meta name="description" content="FreeTDEECalculator is an open-source collection of metabolic calculators: TDEE, BMR, macro, calorie deficit, and weight loss tools. Built with Astro, hosted on Cloudflare.">
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif; background:#FFFFFF; color:#374151; line-height:1.6; }
+  a { color:#6C63FF; text-decoration:none; }
+  a:hover { text-decoration:underline; }
+  .wrap { max-width:960px; margin:0 auto; padding:0 20px; }
+  nav { display:flex; align-items:center; padding:20px 0; border-bottom:1px solid #EEF2FF; }
+  nav .logo { font-weight:800; font-size:1.25rem; color:#111827; }
+  nav .logo span { color:#6C63FF; }
+  .hero { text-align:center; padding:70px 20px 50px; background:linear-gradient(160deg,#EEF2FF 0%,#F8FAFF 50%,#FFFFFF 100%); border-radius:0 0 24px 24px; }
+  .hero h1 { font-size:2.4rem; color:#111827; margin-bottom:12px; }
+  .hero h1 span { background:linear-gradient(135deg,#6C63FF 0%,#4ECDC4 100%); -webkit-background-clip:text; background-clip:text; color:transparent; }
+  .hero p { color:#6B7280; max-width:640px; margin:0 auto 28px; font-size:1.05rem; }
+  .btn { display:inline-block; background:linear-gradient(135deg,#6C63FF 0%,#5A52D5 100%); color:#fff; font-weight:700; padding:13px 32px; border-radius:10px; }
+  .btn:hover { text-decoration:none; opacity:.93; }
+  .stats { display:flex; justify-content:center; gap:44px; padding:32px 0; margin:10px 0 10px; flex-wrap:wrap; }
+  .stats div { text-align:center; }
+  .stats b { display:block; font-size:1.7rem; color:#6C63FF; }
+  .stats small { color:#6B7280; }
+  h2 { color:#111827; margin:44px 0 18px; font-size:1.5rem; }
+  .grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(270px,1fr)); gap:16px; }
+  .card { background:#F8F9FF; border:1px solid #EEF2FF; border-radius:12px; padding:20px; }
+  .card h3 { color:#111827; font-size:1.05rem; margin-bottom:8px; }
+  .card p { color:#6B7280; font-size:.9rem; }
+  .about-box { background:#EEF2FF; border-radius:12px; padding:28px; margin-top:8px; }
+  .about-box p { color:#4B5563; }
+  .stack { display:flex; gap:10px; flex-wrap:wrap; }
+  .stack span { background:#F8F9FF; border:1px solid #EEF2FF; padding:8px 18px; border-radius:20px; font-size:.9rem; color:#4B5563; }
+  footer { border-top:1px solid #EEF2FF; margin-top:56px; padding:26px 0 44px; color:#9CA3AF; font-size:.85rem; text-align:center; }
+  footer a { margin:0 6px; font-weight:600; }
+  @media(max-width:600px){ .hero h1{font-size:1.8rem;} }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <nav>
+    <div class="logo">Free<span>TDEE</span>Calculator</div>
+  </nav>
+
+  <div class="hero">
+    <h1>Open-Source <span>Metabolic Calculators</span></h1>
+    <p>FreeTDEECalculator is a free, open-source collection of evidence-based fitness calculators covering TDEE, BMR, macros, calorie deficits, and weight loss planning. Built with Astro, deployed on Cloudflare.</p>
+    <a class="btn" href="https://freetdeecalculator.app/">Use the Live Calculators</a>
+  </div>
+
+  <div class="stats">
+    <div><b>9</b><small>Calculators</small></div>
+    <div><b>100%</b><small>Free Forever</small></div>
+    <div><b>3</b><small>Validated Formulas</small></div>
+    <div><b>Open</b><small>Source (MIT)</small></div>
+  </div>
+
+  <h2>Calculator Tools</h2>
+  <div class="grid">
+    <div class="card"><h3>TDEE Calculator</h3><p>Total Daily Energy Expenditure with activity multipliers and goal presets.</p></div>
+    <div class="card"><h3>BMR Calculator</h3><p>Basal Metabolic Rate via Mifflin-St Jeor, Harris-Benedict, and Katch-McArdle.</p></div>
+    <div class="card"><h3>Macro Calculator</h3><p>Daily protein, fat, and carbohydrate splits for any goal.</p></div>
+    <div class="card"><h3>Calorie Deficit Calculator</h3><p>Safe deficit tiers for sustainable fat loss.</p></div>
+    <div class="card"><h3>Weight Loss Calculator</h3><p>Target dates, milestone projections, and pacing plans.</p></div>
+    <div class="card"><h3>Cutting Calculator</h3><p>Bodybuilding cuts with lean-mass preservation and refeed logic.</p></div>
+    <div class="card"><h3>Maintenance Calorie Calculator</h3><p>Find your true maintenance intake with calibration guidance.</p></div>
+    <div class="card"><h3>Intermittent Fasting Calculator</h3><p>Fasting windows including 16:8 scheduling.</p></div>
+    <div class="card"><h3>TDEE With Steps</h3><p>Step-count based expenditure estimation.</p></div>
+  </div>
+
+  <h2>About This Project</h2>
+  <div class="about-box">
+    <p>This repository contains the source code behind the free calculators at freetdeecalculator.app. The project aims to make validated metabolic science accessible to everyone, with transparent formulas and no paywalls. Read more <a href="https://freetdeecalculator.app/about/">about the project here</a>.</p>
+  </div>
+
+  <h2>Built With</h2>
+  <div class="stack">
+    <span>Astro</span><span>Cloudflare Pages</span><span>TypeScript</span><span>GitHub Actions</span><span>Web Components</span>
+  </div>
+
+  <footer>
+    <a href="https://github.com/Free-TDEE-Calculator/teedeecalculator">GitHub Repository</a>
+    <p style="margin-top:12px">FreeTDEECalculator - open-source metabolic calculators. For informational purposes only, not medical advice.</p>
+  </footer>
+
+</div>
+</body>
+</html>
